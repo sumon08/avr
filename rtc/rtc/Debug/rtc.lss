@@ -1,0 +1,968 @@
+
+rtc.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000528  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  0000059c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000001e  00800060  00800060  0000059c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000059c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000005cc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000d0  00000000  00000000  00000608  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000f2a  00000000  00000000  000006d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000008c5  00000000  00000000  00001602  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000758  00000000  00000000  00001ec7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001f0  00000000  00000000  00002620  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004c1  00000000  00000000  00002810  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000004f1  00000000  00000000  00002cd1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a0  00000000  00000000  000031c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	28 c0       	rjmp	.+80     	; 0x52 <__ctors_end>
+   2:	37 c0       	rjmp	.+110    	; 0x72 <__bad_interrupt>
+   4:	36 c0       	rjmp	.+108    	; 0x72 <__bad_interrupt>
+   6:	36 c0       	rjmp	.+108    	; 0x74 <__vector_3>
+   8:	34 c0       	rjmp	.+104    	; 0x72 <__bad_interrupt>
+   a:	33 c0       	rjmp	.+102    	; 0x72 <__bad_interrupt>
+   c:	a6 c1       	rjmp	.+844    	; 0x35a <__vector_6>
+   e:	31 c0       	rjmp	.+98     	; 0x72 <__bad_interrupt>
+  10:	30 c0       	rjmp	.+96     	; 0x72 <__bad_interrupt>
+  12:	2f c0       	rjmp	.+94     	; 0x72 <__bad_interrupt>
+  14:	2e c0       	rjmp	.+92     	; 0x72 <__bad_interrupt>
+  16:	2d c0       	rjmp	.+90     	; 0x72 <__bad_interrupt>
+  18:	2c c0       	rjmp	.+88     	; 0x72 <__bad_interrupt>
+  1a:	2b c0       	rjmp	.+86     	; 0x72 <__bad_interrupt>
+  1c:	2a c0       	rjmp	.+84     	; 0x72 <__bad_interrupt>
+  1e:	29 c0       	rjmp	.+82     	; 0x72 <__bad_interrupt>
+  20:	28 c0       	rjmp	.+80     	; 0x72 <__bad_interrupt>
+  22:	27 c0       	rjmp	.+78     	; 0x72 <__bad_interrupt>
+  24:	26 c0       	rjmp	.+76     	; 0x72 <__bad_interrupt>
+  26:	97 c1       	rjmp	.+814    	; 0x356 <GetDayInMonth+0x2a>
+  28:	8a c1       	rjmp	.+788    	; 0x33e <GetDayInMonth+0x12>
+  2a:	95 c1       	rjmp	.+810    	; 0x356 <GetDayInMonth+0x2a>
+  2c:	8a c1       	rjmp	.+788    	; 0x342 <GetDayInMonth+0x16>
+  2e:	93 c1       	rjmp	.+806    	; 0x356 <GetDayInMonth+0x2a>
+  30:	8a c1       	rjmp	.+788    	; 0x346 <GetDayInMonth+0x1a>
+  32:	91 c1       	rjmp	.+802    	; 0x356 <GetDayInMonth+0x2a>
+  34:	90 c1       	rjmp	.+800    	; 0x356 <GetDayInMonth+0x2a>
+  36:	89 c1       	rjmp	.+786    	; 0x34a <GetDayInMonth+0x1e>
+  38:	8e c1       	rjmp	.+796    	; 0x356 <GetDayInMonth+0x2a>
+  3a:	89 c1       	rjmp	.+786    	; 0x34e <GetDayInMonth+0x22>
+  3c:	8c c1       	rjmp	.+792    	; 0x356 <GetDayInMonth+0x2a>
+  3e:	2d c2       	rjmp	.+1114   	; 0x49a <DisplayWrite+0x24>
+  40:	32 c2       	rjmp	.+1124   	; 0x4a6 <DisplayWrite+0x30>
+  42:	37 c2       	rjmp	.+1134   	; 0x4b2 <DisplayWrite+0x3c>
+  44:	3c c2       	rjmp	.+1144   	; 0x4be <DisplayWrite+0x48>
+  46:	41 c2       	rjmp	.+1154   	; 0x4ca <DisplayWrite+0x54>
+  48:	46 c2       	rjmp	.+1164   	; 0x4d6 <DisplayWrite+0x60>
+  4a:	4b c2       	rjmp	.+1174   	; 0x4e2 <DisplayWrite+0x6c>
+  4c:	50 c2       	rjmp	.+1184   	; 0x4ee <DisplayWrite+0x78>
+  4e:	55 c2       	rjmp	.+1194   	; 0x4fa <DisplayWrite+0x84>
+  50:	5a c2       	rjmp	.+1204   	; 0x506 <DisplayWrite+0x90>
+
+00000052 <__ctors_end>:
+  52:	11 24       	eor	r1, r1
+  54:	1f be       	out	0x3f, r1	; 63
+  56:	cf e5       	ldi	r28, 0x5F	; 95
+  58:	d4 e0       	ldi	r29, 0x04	; 4
+  5a:	de bf       	out	0x3e, r29	; 62
+  5c:	cd bf       	out	0x3d, r28	; 61
+
+0000005e <__do_clear_bss>:
+  5e:	20 e0       	ldi	r18, 0x00	; 0
+  60:	a0 e6       	ldi	r26, 0x60	; 96
+  62:	b0 e0       	ldi	r27, 0x00	; 0
+  64:	01 c0       	rjmp	.+2      	; 0x68 <.do_clear_bss_start>
+
+00000066 <.do_clear_bss_loop>:
+  66:	1d 92       	st	X+, r1
+
+00000068 <.do_clear_bss_start>:
+  68:	ae 37       	cpi	r26, 0x7E	; 126
+  6a:	b2 07       	cpc	r27, r18
+  6c:	e1 f7       	brne	.-8      	; 0x66 <.do_clear_bss_loop>
+  6e:	d0 d0       	rcall	.+416    	; 0x210 <main>
+  70:	59 c2       	rjmp	.+1202   	; 0x524 <_exit>
+
+00000072 <__bad_interrupt>:
+  72:	c6 cf       	rjmp	.-116    	; 0x0 <__vectors>
+
+00000074 <__vector_3>:
+
+
+volatile uint8_t time_up_flag  = 0;
+
+ISR(TIMER2_COMP_vect)
+{
+  74:	1f 92       	push	r1
+  76:	0f 92       	push	r0
+  78:	0f b6       	in	r0, 0x3f	; 63
+  7a:	0f 92       	push	r0
+  7c:	11 24       	eor	r1, r1
+  7e:	8f 93       	push	r24
+	time_up_flag = 1;
+  80:	81 e0       	ldi	r24, 0x01	; 1
+  82:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+}
+  86:	8f 91       	pop	r24
+  88:	0f 90       	pop	r0
+  8a:	0f be       	out	0x3f, r0	; 63
+  8c:	0f 90       	pop	r0
+  8e:	1f 90       	pop	r1
+  90:	18 95       	reti
+
+00000092 <InitTimer>:
+
+
+void InitTimer()
+{
+	TCCR2 |= 1 << WGM21 | 1 << CS20 | 1 << CS21 | 1 << CS22;
+  92:	85 b5       	in	r24, 0x25	; 37
+  94:	8f 60       	ori	r24, 0x0F	; 15
+  96:	85 bd       	out	0x25, r24	; 37
+	OCR2 = 0xB2; // want 5ms but got 4.9920 ms
+  98:	82 eb       	ldi	r24, 0xB2	; 178
+  9a:	83 bd       	out	0x23, r24	; 35
+	TIMSK |= 1 << OCIE2;
+  9c:	89 b7       	in	r24, 0x39	; 57
+  9e:	80 68       	ori	r24, 0x80	; 128
+  a0:	89 bf       	out	0x39, r24	; 57
+	sei();
+  a2:	78 94       	sei
+  a4:	08 95       	ret
+
+000000a6 <WriteTime>:
+}
+
+
+void WriteTime(SegmentDisplay disp, Time * tim)
+{
+  a6:	ef 92       	push	r14
+  a8:	ff 92       	push	r15
+  aa:	0f 93       	push	r16
+  ac:	1f 93       	push	r17
+  ae:	cf 93       	push	r28
+  b0:	8c 01       	movw	r16, r24
+  b2:	7b 01       	movw	r14, r22
+	DisplayWrite(disp, tim->hour / 10, 0);
+  b4:	fb 01       	movw	r30, r22
+  b6:	63 81       	ldd	r22, Z+3	; 0x03
+  b8:	cd ec       	ldi	r28, 0xCD	; 205
+  ba:	6c 9f       	mul	r22, r28
+  bc:	61 2d       	mov	r22, r1
+  be:	11 24       	eor	r1, r1
+  c0:	66 95       	lsr	r22
+  c2:	66 95       	lsr	r22
+  c4:	66 95       	lsr	r22
+  c6:	40 e0       	ldi	r20, 0x00	; 0
+  c8:	d6 d1       	rcall	.+940    	; 0x476 <DisplayWrite>
+	DisplayWrite(disp, tim->hour % 10, 1);
+  ca:	f7 01       	movw	r30, r14
+  cc:	63 81       	ldd	r22, Z+3	; 0x03
+  ce:	6c 9f       	mul	r22, r28
+  d0:	81 2d       	mov	r24, r1
+  d2:	11 24       	eor	r1, r1
+  d4:	86 95       	lsr	r24
+  d6:	86 95       	lsr	r24
+  d8:	86 95       	lsr	r24
+  da:	88 0f       	add	r24, r24
+  dc:	98 2f       	mov	r25, r24
+  de:	99 0f       	add	r25, r25
+  e0:	99 0f       	add	r25, r25
+  e2:	89 0f       	add	r24, r25
+  e4:	68 1b       	sub	r22, r24
+  e6:	41 e0       	ldi	r20, 0x01	; 1
+  e8:	c8 01       	movw	r24, r16
+  ea:	c5 d1       	rcall	.+906    	; 0x476 <DisplayWrite>
+	
+	DisplayWrite(disp, tim->min / 10, 2);
+  ec:	f7 01       	movw	r30, r14
+  ee:	64 81       	ldd	r22, Z+4	; 0x04
+  f0:	6c 9f       	mul	r22, r28
+  f2:	61 2d       	mov	r22, r1
+  f4:	11 24       	eor	r1, r1
+  f6:	66 95       	lsr	r22
+  f8:	66 95       	lsr	r22
+  fa:	66 95       	lsr	r22
+  fc:	42 e0       	ldi	r20, 0x02	; 2
+  fe:	c8 01       	movw	r24, r16
+ 100:	ba d1       	rcall	.+884    	; 0x476 <DisplayWrite>
+	DisplayWrite(disp, tim->min % 10, 3);
+ 102:	f7 01       	movw	r30, r14
+ 104:	64 81       	ldd	r22, Z+4	; 0x04
+ 106:	6c 9f       	mul	r22, r28
+ 108:	81 2d       	mov	r24, r1
+ 10a:	11 24       	eor	r1, r1
+ 10c:	86 95       	lsr	r24
+ 10e:	86 95       	lsr	r24
+ 110:	86 95       	lsr	r24
+ 112:	88 0f       	add	r24, r24
+ 114:	98 2f       	mov	r25, r24
+ 116:	99 0f       	add	r25, r25
+ 118:	99 0f       	add	r25, r25
+ 11a:	89 0f       	add	r24, r25
+ 11c:	68 1b       	sub	r22, r24
+ 11e:	43 e0       	ldi	r20, 0x03	; 3
+ 120:	c8 01       	movw	r24, r16
+ 122:	a9 d1       	rcall	.+850    	; 0x476 <DisplayWrite>
+	
+	DisplayWrite(disp, tim->sec / 10, 4);
+ 124:	f7 01       	movw	r30, r14
+ 126:	65 81       	ldd	r22, Z+5	; 0x05
+ 128:	6c 9f       	mul	r22, r28
+ 12a:	61 2d       	mov	r22, r1
+ 12c:	11 24       	eor	r1, r1
+ 12e:	66 95       	lsr	r22
+ 130:	66 95       	lsr	r22
+ 132:	66 95       	lsr	r22
+ 134:	44 e0       	ldi	r20, 0x04	; 4
+ 136:	c8 01       	movw	r24, r16
+ 138:	9e d1       	rcall	.+828    	; 0x476 <DisplayWrite>
+	DisplayWrite(disp, tim->sec % 10, 5);
+ 13a:	f7 01       	movw	r30, r14
+ 13c:	65 81       	ldd	r22, Z+5	; 0x05
+ 13e:	6c 9f       	mul	r22, r28
+ 140:	81 2d       	mov	r24, r1
+ 142:	11 24       	eor	r1, r1
+ 144:	86 95       	lsr	r24
+ 146:	86 95       	lsr	r24
+ 148:	86 95       	lsr	r24
+ 14a:	88 0f       	add	r24, r24
+ 14c:	98 2f       	mov	r25, r24
+ 14e:	99 0f       	add	r25, r25
+ 150:	99 0f       	add	r25, r25
+ 152:	89 0f       	add	r24, r25
+ 154:	68 1b       	sub	r22, r24
+ 156:	45 e0       	ldi	r20, 0x05	; 5
+ 158:	c8 01       	movw	r24, r16
+ 15a:	8d d1       	rcall	.+794    	; 0x476 <DisplayWrite>
+	
+	DisplayWrite(disp, tim->year / 10, 6);
+ 15c:	f7 01       	movw	r30, r14
+ 15e:	60 81       	ld	r22, Z
+ 160:	6c 9f       	mul	r22, r28
+ 162:	61 2d       	mov	r22, r1
+ 164:	11 24       	eor	r1, r1
+ 166:	66 95       	lsr	r22
+ 168:	66 95       	lsr	r22
+ 16a:	66 95       	lsr	r22
+ 16c:	46 e0       	ldi	r20, 0x06	; 6
+ 16e:	c8 01       	movw	r24, r16
+ 170:	82 d1       	rcall	.+772    	; 0x476 <DisplayWrite>
+	DisplayWrite(disp, tim->year % 10, 7);
+ 172:	f7 01       	movw	r30, r14
+ 174:	60 81       	ld	r22, Z
+ 176:	6c 9f       	mul	r22, r28
+ 178:	81 2d       	mov	r24, r1
+ 17a:	11 24       	eor	r1, r1
+ 17c:	86 95       	lsr	r24
+ 17e:	86 95       	lsr	r24
+ 180:	86 95       	lsr	r24
+ 182:	88 0f       	add	r24, r24
+ 184:	98 2f       	mov	r25, r24
+ 186:	99 0f       	add	r25, r25
+ 188:	99 0f       	add	r25, r25
+ 18a:	89 0f       	add	r24, r25
+ 18c:	68 1b       	sub	r22, r24
+ 18e:	47 e0       	ldi	r20, 0x07	; 7
+ 190:	c8 01       	movw	r24, r16
+ 192:	71 d1       	rcall	.+738    	; 0x476 <DisplayWrite>
+	
+	DisplayWrite(disp, tim->month / 10, 8);
+ 194:	f7 01       	movw	r30, r14
+ 196:	61 81       	ldd	r22, Z+1	; 0x01
+ 198:	6c 9f       	mul	r22, r28
+ 19a:	61 2d       	mov	r22, r1
+ 19c:	11 24       	eor	r1, r1
+ 19e:	66 95       	lsr	r22
+ 1a0:	66 95       	lsr	r22
+ 1a2:	66 95       	lsr	r22
+ 1a4:	48 e0       	ldi	r20, 0x08	; 8
+ 1a6:	c8 01       	movw	r24, r16
+ 1a8:	66 d1       	rcall	.+716    	; 0x476 <DisplayWrite>
+	DisplayWrite(disp, tim->month % 10, 9);
+ 1aa:	f7 01       	movw	r30, r14
+ 1ac:	61 81       	ldd	r22, Z+1	; 0x01
+ 1ae:	6c 9f       	mul	r22, r28
+ 1b0:	81 2d       	mov	r24, r1
+ 1b2:	11 24       	eor	r1, r1
+ 1b4:	86 95       	lsr	r24
+ 1b6:	86 95       	lsr	r24
+ 1b8:	86 95       	lsr	r24
+ 1ba:	88 0f       	add	r24, r24
+ 1bc:	98 2f       	mov	r25, r24
+ 1be:	99 0f       	add	r25, r25
+ 1c0:	99 0f       	add	r25, r25
+ 1c2:	89 0f       	add	r24, r25
+ 1c4:	68 1b       	sub	r22, r24
+ 1c6:	49 e0       	ldi	r20, 0x09	; 9
+ 1c8:	c8 01       	movw	r24, r16
+ 1ca:	55 d1       	rcall	.+682    	; 0x476 <DisplayWrite>
+	
+	DisplayWrite(disp, tim->date / 10, 10);
+ 1cc:	f7 01       	movw	r30, r14
+ 1ce:	62 81       	ldd	r22, Z+2	; 0x02
+ 1d0:	6c 9f       	mul	r22, r28
+ 1d2:	61 2d       	mov	r22, r1
+ 1d4:	11 24       	eor	r1, r1
+ 1d6:	66 95       	lsr	r22
+ 1d8:	66 95       	lsr	r22
+ 1da:	66 95       	lsr	r22
+ 1dc:	4a e0       	ldi	r20, 0x0A	; 10
+ 1de:	c8 01       	movw	r24, r16
+ 1e0:	4a d1       	rcall	.+660    	; 0x476 <DisplayWrite>
+	DisplayWrite(disp, tim->date % 10, 11);
+ 1e2:	f7 01       	movw	r30, r14
+ 1e4:	62 81       	ldd	r22, Z+2	; 0x02
+ 1e6:	6c 9f       	mul	r22, r28
+ 1e8:	c1 2d       	mov	r28, r1
+ 1ea:	11 24       	eor	r1, r1
+ 1ec:	c6 95       	lsr	r28
+ 1ee:	c6 95       	lsr	r28
+ 1f0:	c6 95       	lsr	r28
+ 1f2:	cc 0f       	add	r28, r28
+ 1f4:	8c 2f       	mov	r24, r28
+ 1f6:	88 0f       	add	r24, r24
+ 1f8:	88 0f       	add	r24, r24
+ 1fa:	c8 0f       	add	r28, r24
+ 1fc:	6c 1b       	sub	r22, r28
+ 1fe:	4b e0       	ldi	r20, 0x0B	; 11
+ 200:	c8 01       	movw	r24, r16
+ 202:	39 d1       	rcall	.+626    	; 0x476 <DisplayWrite>
+}
+ 204:	cf 91       	pop	r28
+ 206:	1f 91       	pop	r17
+ 208:	0f 91       	pop	r16
+ 20a:	ff 90       	pop	r15
+ 20c:	ef 90       	pop	r14
+ 20e:	08 95       	ret
+
+00000210 <main>:
+
+int main(void)
+{
+ 210:	cf 93       	push	r28
+ 212:	df 93       	push	r29
+ 214:	00 d0       	rcall	.+0      	; 0x216 <main+0x6>
+ 216:	00 d0       	rcall	.+0      	; 0x218 <main+0x8>
+ 218:	00 d0       	rcall	.+0      	; 0x21a <main+0xa>
+ 21a:	cd b7       	in	r28, 0x3d	; 61
+ 21c:	de b7       	in	r29, 0x3e	; 62
+	SegmentDisplay disp = DisplayCreate();
+ 21e:	01 d1       	rcall	.+514    	; 0x422 <DisplayCreate>
+ 220:	7c 01       	movw	r14, r24
+	Clock clk = ClockCreate();
+ 222:	3b d0       	rcall	.+118    	; 0x29a <ClockCreate>
+ 224:	8c 01       	movw	r16, r24
+	InitTimer();
+ 226:	35 df       	rcall	.-406    	; 0x92 <InitTimer>
+	Time tim;
+	tim.sec = 11;
+ 228:	8b e0       	ldi	r24, 0x0B	; 11
+ 22a:	8e 83       	std	Y+6, r24	; 0x06
+	tim.min = 15;
+ 22c:	8f e0       	ldi	r24, 0x0F	; 15
+ 22e:	8d 83       	std	Y+5, r24	; 0x05
+	tim.hour = 18;
+ 230:	82 e1       	ldi	r24, 0x12	; 18
+ 232:	8c 83       	std	Y+4, r24	; 0x04
+	tim.date = 21;
+ 234:	85 e1       	ldi	r24, 0x15	; 21
+ 236:	8b 83       	std	Y+3, r24	; 0x03
+	tim.month = 9;
+ 238:	99 e0       	ldi	r25, 0x09	; 9
+ 23a:	9a 83       	std	Y+2, r25	; 0x02
+	tim.year = 21;
+ 23c:	89 83       	std	Y+1, r24	; 0x01
+	
+	ClockSet(clk, &tim);
+ 23e:	be 01       	movw	r22, r28
+ 240:	6f 5f       	subi	r22, 0xFF	; 255
+ 242:	7f 4f       	sbci	r23, 0xFF	; 255
+ 244:	c8 01       	movw	r24, r16
+ 246:	47 d0       	rcall	.+142    	; 0x2d6 <ClockSet>
+	
+	WriteTime(disp, &tim);
+ 248:	be 01       	movw	r22, r28
+ 24a:	6f 5f       	subi	r22, 0xFF	; 255
+ 24c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 24e:	c7 01       	movw	r24, r14
+ 250:	2a df       	rcall	.-428    	; 0xa6 <WriteTime>
+    /* Replace with your application code */
+    while (1) 
+    {
+		if (time_up_flag == 1)
+ 252:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 256:	81 30       	cpi	r24, 0x01	; 1
+ 258:	21 f4       	brne	.+8      	; 0x262 <main+0x52>
+		{
+			time_up_flag = 0;
+ 25a:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+			DisplayUpdate(disp);
+ 25e:	c7 01       	movw	r24, r14
+ 260:	f7 d0       	rcall	.+494    	; 0x450 <DisplayUpdate>
+		}
+		if (ClockIsUpdated(clk) == 1)
+ 262:	c8 01       	movw	r24, r16
+ 264:	5b d0       	rcall	.+182    	; 0x31c <ClockIsUpdated>
+ 266:	81 30       	cpi	r24, 0x01	; 1
+ 268:	a1 f7       	brne	.-24     	; 0x252 <main+0x42>
+		{
+			
+			ClockGet(clk, &tim);
+ 26a:	be 01       	movw	r22, r28
+ 26c:	6f 5f       	subi	r22, 0xFF	; 255
+ 26e:	7f 4f       	sbci	r23, 0xFF	; 255
+ 270:	c8 01       	movw	r24, r16
+ 272:	4c d0       	rcall	.+152    	; 0x30c <ClockGet>
+			WriteTime(disp,&tim);
+ 274:	be 01       	movw	r22, r28
+ 276:	6f 5f       	subi	r22, 0xFF	; 255
+ 278:	7f 4f       	sbci	r23, 0xFF	; 255
+ 27a:	c7 01       	movw	r24, r14
+ 27c:	14 df       	rcall	.-472    	; 0xa6 <WriteTime>
+ 27e:	e9 cf       	rjmp	.-46     	; 0x252 <main+0x42>
+
+00000280 <InitialiseHardwareTimer>:
+
+uint8_t IsLeapYear(int year)
+{
+	// not handled right now. will write code later
+	return 0;
+}
+ 280:	1f bc       	out	0x2f, r1	; 47
+ 282:	8e b5       	in	r24, 0x2e	; 46
+ 284:	8d 60       	ori	r24, 0x0D	; 13
+ 286:	8e bd       	out	0x2e, r24	; 46
+ 288:	88 e0       	ldi	r24, 0x08	; 8
+ 28a:	9d e3       	ldi	r25, 0x3D	; 61
+ 28c:	9b bd       	out	0x2b, r25	; 43
+ 28e:	8a bd       	out	0x2a, r24	; 42
+ 290:	89 b7       	in	r24, 0x39	; 57
+ 292:	80 61       	ori	r24, 0x10	; 16
+ 294:	89 bf       	out	0x39, r24	; 57
+ 296:	78 94       	sei
+ 298:	08 95       	ret
+
+0000029a <ClockCreate>:
+ 29a:	cf 93       	push	r28
+ 29c:	df 93       	push	r29
+ 29e:	80 91 6f 00 	lds	r24, 0x006F	; 0x80006f <ck+0xe>
+ 2a2:	81 11       	cpse	r24, r1
+ 2a4:	13 c0       	rjmp	.+38     	; 0x2cc <ClockCreate+0x32>
+ 2a6:	e1 e6       	ldi	r30, 0x61	; 97
+ 2a8:	f0 e0       	ldi	r31, 0x00	; 0
+ 2aa:	81 e0       	ldi	r24, 0x01	; 1
+ 2ac:	86 87       	std	Z+14, r24	; 0x0e
+ 2ae:	86 e0       	ldi	r24, 0x06	; 6
+ 2b0:	df 01       	movw	r26, r30
+ 2b2:	c8 2f       	mov	r28, r24
+ 2b4:	1d 92       	st	X+, r1
+ 2b6:	ca 95       	dec	r28
+ 2b8:	e9 f7       	brne	.-6      	; 0x2b4 <ClockCreate+0x1a>
+ 2ba:	a7 e6       	ldi	r26, 0x67	; 103
+ 2bc:	b0 e0       	ldi	r27, 0x00	; 0
+ 2be:	ed 01       	movw	r28, r26
+ 2c0:	19 92       	st	Y+, r1
+ 2c2:	8a 95       	dec	r24
+ 2c4:	e9 f7       	brne	.-6      	; 0x2c0 <ClockCreate+0x26>
+ 2c6:	14 86       	std	Z+12, r1	; 0x0c
+ 2c8:	15 86       	std	Z+13, r1	; 0x0d
+ 2ca:	da df       	rcall	.-76     	; 0x280 <InitialiseHardwareTimer>
+ 2cc:	81 e6       	ldi	r24, 0x61	; 97
+ 2ce:	90 e0       	ldi	r25, 0x00	; 0
+ 2d0:	df 91       	pop	r29
+ 2d2:	cf 91       	pop	r28
+ 2d4:	08 95       	ret
+
+000002d6 <ClockSet>:
+ 2d6:	fc 01       	movw	r30, r24
+ 2d8:	db 01       	movw	r26, r22
+ 2da:	12 96       	adiw	r26, 0x02	; 2
+ 2dc:	8c 91       	ld	r24, X
+ 2de:	12 97       	sbiw	r26, 0x02	; 2
+ 2e0:	80 87       	std	Z+8, r24	; 0x08
+ 2e2:	13 96       	adiw	r26, 0x03	; 3
+ 2e4:	8c 91       	ld	r24, X
+ 2e6:	13 97       	sbiw	r26, 0x03	; 3
+ 2e8:	81 87       	std	Z+9, r24	; 0x09
+ 2ea:	14 96       	adiw	r26, 0x04	; 4
+ 2ec:	8c 91       	ld	r24, X
+ 2ee:	14 97       	sbiw	r26, 0x04	; 4
+ 2f0:	82 87       	std	Z+10, r24	; 0x0a
+ 2f2:	11 96       	adiw	r26, 0x01	; 1
+ 2f4:	8c 91       	ld	r24, X
+ 2f6:	11 97       	sbiw	r26, 0x01	; 1
+ 2f8:	87 83       	std	Z+7, r24	; 0x07
+ 2fa:	15 96       	adiw	r26, 0x05	; 5
+ 2fc:	8c 91       	ld	r24, X
+ 2fe:	15 97       	sbiw	r26, 0x05	; 5
+ 300:	83 87       	std	Z+11, r24	; 0x0b
+ 302:	8c 91       	ld	r24, X
+ 304:	86 83       	std	Z+6, r24	; 0x06
+ 306:	81 e0       	ldi	r24, 0x01	; 1
+ 308:	84 87       	std	Z+12, r24	; 0x0c
+ 30a:	08 95       	ret
+
+0000030c <ClockGet>:
+ 30c:	fc 01       	movw	r30, r24
+ 30e:	96 e0       	ldi	r25, 0x06	; 6
+ 310:	db 01       	movw	r26, r22
+ 312:	01 90       	ld	r0, Z+
+ 314:	0d 92       	st	X+, r0
+ 316:	9a 95       	dec	r25
+ 318:	e1 f7       	brne	.-8      	; 0x312 <ClockGet+0x6>
+ 31a:	08 95       	ret
+
+0000031c <ClockIsUpdated>:
+ 31c:	fc 01       	movw	r30, r24
+ 31e:	85 85       	ldd	r24, Z+13	; 0x0d
+ 320:	81 30       	cpi	r24, 0x01	; 1
+ 322:	11 f4       	brne	.+4      	; 0x328 <ClockIsUpdated+0xc>
+ 324:	15 86       	std	Z+13, r1	; 0x0d
+ 326:	08 95       	ret
+ 328:	80 e0       	ldi	r24, 0x00	; 0
+ 32a:	08 95       	ret
+
+0000032c <GetDayInMonth>:
+
+uint8_t GetDayInMonth(Month month)
+{
+	uint8_t day = 0;
+	
+	switch(month)
+ 32c:	90 e0       	ldi	r25, 0x00	; 0
+ 32e:	fc 01       	movw	r30, r24
+ 330:	31 97       	sbiw	r30, 0x01	; 1
+ 332:	ec 30       	cpi	r30, 0x0C	; 12
+ 334:	f1 05       	cpc	r31, r1
+ 336:	68 f4       	brcc	.+26     	; 0x352 <GetDayInMonth+0x26>
+ 338:	ed 5e       	subi	r30, 0xED	; 237
+ 33a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 33c:	09 94       	ijmp
+	{
+		case MONTH_JANUARY:
+		day = 31;
+		break;
+		case MONTH_FEBRUARY:
+		day = IsLeapYear(ck.time.year)? 29 : 28;
+ 33e:	8c e1       	ldi	r24, 0x1C	; 28
+ 340:	08 95       	ret
+		break;
+		case MONTH_MARCH:
+		day = 31;
+		break;
+		case MONTH_APRIL:
+		day = 30;
+ 342:	8e e1       	ldi	r24, 0x1E	; 30
+		break;
+ 344:	08 95       	ret
+		case MONTH_MAY:
+		day = 31;
+		break;
+		case MONTH_JUNE:
+		day = 30;
+ 346:	8e e1       	ldi	r24, 0x1E	; 30
+		break;
+ 348:	08 95       	ret
+		break;
+		case MONTH_AUGUST:
+		day = 31;
+		break;
+		case MONTH_SEPTEMBER:
+		day = 30;
+ 34a:	8e e1       	ldi	r24, 0x1E	; 30
+		break;
+ 34c:	08 95       	ret
+		case MONTH_OCTOBER:
+		day = 31;
+		break;
+		case MONTH_NOVEMBER:
+		day = 30;
+ 34e:	8e e1       	ldi	r24, 0x1E	; 30
+		break;
+ 350:	08 95       	ret
+		case MONTH_DECEMBER:
+		day = 31;
+		break;
+		default:
+		day = 30;
+ 352:	8e e1       	ldi	r24, 0x1E	; 30
+		break;
+ 354:	08 95       	ret
+	uint8_t day = 0;
+	
+	switch(month)
+	{
+		case MONTH_JANUARY:
+		day = 31;
+ 356:	8f e1       	ldi	r24, 0x1F	; 31
+		day = 30;
+		break;
+		
+	}
+	return day;
+}
+ 358:	08 95       	ret
+
+0000035a <__vector_6>:
+
+ISR(TIMER1_COMPA_vect)
+{
+ 35a:	1f 92       	push	r1
+ 35c:	0f 92       	push	r0
+ 35e:	0f b6       	in	r0, 0x3f	; 63
+ 360:	0f 92       	push	r0
+ 362:	11 24       	eor	r1, r1
+ 364:	2f 93       	push	r18
+ 366:	3f 93       	push	r19
+ 368:	4f 93       	push	r20
+ 36a:	5f 93       	push	r21
+ 36c:	6f 93       	push	r22
+ 36e:	7f 93       	push	r23
+ 370:	8f 93       	push	r24
+ 372:	9f 93       	push	r25
+ 374:	af 93       	push	r26
+ 376:	bf 93       	push	r27
+ 378:	cf 93       	push	r28
+ 37a:	df 93       	push	r29
+ 37c:	ef 93       	push	r30
+ 37e:	ff 93       	push	r31
+	if (ck.is_set == 1)
+ 380:	80 91 6d 00 	lds	r24, 0x006D	; 0x80006d <ck+0xc>
+ 384:	81 30       	cpi	r24, 0x01	; 1
+ 386:	59 f4       	brne	.+22     	; 0x39e <__vector_6+0x44>
+	{
+		ck.is_set = 0;
+ 388:	10 92 6d 00 	sts	0x006D, r1	; 0x80006d <ck+0xc>
+		ck.time = ck.buffer;
+ 38c:	86 e0       	ldi	r24, 0x06	; 6
+ 38e:	e7 e6       	ldi	r30, 0x67	; 103
+ 390:	f0 e0       	ldi	r31, 0x00	; 0
+ 392:	a1 e6       	ldi	r26, 0x61	; 97
+ 394:	b0 e0       	ldi	r27, 0x00	; 0
+ 396:	01 90       	ld	r0, Z+
+ 398:	0d 92       	st	X+, r0
+ 39a:	8a 95       	dec	r24
+ 39c:	e1 f7       	brne	.-8      	; 0x396 <__vector_6+0x3c>
+	}
+	ck.time.sec++;
+ 39e:	e1 e6       	ldi	r30, 0x61	; 97
+ 3a0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3a2:	85 81       	ldd	r24, Z+5	; 0x05
+ 3a4:	8f 5f       	subi	r24, 0xFF	; 255
+ 3a6:	85 83       	std	Z+5, r24	; 0x05
+	if (ck.time.sec == 60)
+ 3a8:	8c 33       	cpi	r24, 0x3C	; 60
+ 3aa:	41 f5       	brne	.+80     	; 0x3fc <__vector_6+0xa2>
+	{
+		ck.time.min++;
+ 3ac:	84 81       	ldd	r24, Z+4	; 0x04
+ 3ae:	8f 5f       	subi	r24, 0xFF	; 255
+ 3b0:	84 83       	std	Z+4, r24	; 0x04
+		ck.time.sec = 0;
+ 3b2:	15 82       	std	Z+5, r1	; 0x05
+	}			
+	else
+		return;
+			
+	if (ck.time.min == 60)
+ 3b4:	8c 33       	cpi	r24, 0x3C	; 60
+ 3b6:	11 f5       	brne	.+68     	; 0x3fc <__vector_6+0xa2>
+	{
+		ck.time.hour++;
+ 3b8:	83 81       	ldd	r24, Z+3	; 0x03
+ 3ba:	8f 5f       	subi	r24, 0xFF	; 255
+ 3bc:	83 83       	std	Z+3, r24	; 0x03
+		ck.time.min = 0;
+ 3be:	14 82       	std	Z+4, r1	; 0x04
+	}
+	else
+		return;
+	
+	if (ck.time.hour == 24)
+ 3c0:	88 31       	cpi	r24, 0x18	; 24
+ 3c2:	e1 f4       	brne	.+56     	; 0x3fc <__vector_6+0xa2>
+	{
+		ck.time.hour = 0;
+ 3c4:	13 82       	std	Z+3, r1	; 0x03
+		ck.time.date ++;
+ 3c6:	c2 81       	ldd	r28, Z+2	; 0x02
+ 3c8:	cf 5f       	subi	r28, 0xFF	; 255
+ 3ca:	c2 83       	std	Z+2, r28	; 0x02
+	}
+	else
+		return;
+		
+	if (ck.time.date == GetDayInMonth(ck.time.month))
+ 3cc:	d1 81       	ldd	r29, Z+1	; 0x01
+ 3ce:	8d 2f       	mov	r24, r29
+ 3d0:	ad df       	rcall	.-166    	; 0x32c <GetDayInMonth>
+ 3d2:	c8 13       	cpse	r28, r24
+ 3d4:	13 c0       	rjmp	.+38     	; 0x3fc <__vector_6+0xa2>
+	{
+		ck.time.date = 1;
+ 3d6:	81 e0       	ldi	r24, 0x01	; 1
+ 3d8:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <ck+0x2>
+		ck.time.month ++;
+ 3dc:	df 5f       	subi	r29, 0xFF	; 255
+	}
+	else
+		return;
+	
+	if(ck.time.month == 13)
+ 3de:	dd 30       	cpi	r29, 0x0D	; 13
+ 3e0:	19 f0       	breq	.+6      	; 0x3e8 <__vector_6+0x8e>
+		return;
+		
+	if (ck.time.date == GetDayInMonth(ck.time.month))
+	{
+		ck.time.date = 1;
+		ck.time.month ++;
+ 3e2:	d0 93 62 00 	sts	0x0062, r29	; 0x800062 <ck+0x1>
+ 3e6:	07 c0       	rjmp	.+14     	; 0x3f6 <__vector_6+0x9c>
+	else
+		return;
+	
+	if(ck.time.month == 13)
+	{
+		ck.time.month = MONTH_JANUARY;
+ 3e8:	e1 e6       	ldi	r30, 0x61	; 97
+ 3ea:	f0 e0       	ldi	r31, 0x00	; 0
+ 3ec:	81 e0       	ldi	r24, 0x01	; 1
+ 3ee:	81 83       	std	Z+1, r24	; 0x01
+		ck.time.year ++;
+ 3f0:	80 81       	ld	r24, Z
+ 3f2:	8f 5f       	subi	r24, 0xFF	; 255
+ 3f4:	80 83       	st	Z, r24
+	}
+	
+	ck.is_updated = 1;
+ 3f6:	81 e0       	ldi	r24, 0x01	; 1
+ 3f8:	80 93 6e 00 	sts	0x006E, r24	; 0x80006e <ck+0xd>
+ 3fc:	ff 91       	pop	r31
+ 3fe:	ef 91       	pop	r30
+ 400:	df 91       	pop	r29
+ 402:	cf 91       	pop	r28
+ 404:	bf 91       	pop	r27
+ 406:	af 91       	pop	r26
+ 408:	9f 91       	pop	r25
+ 40a:	8f 91       	pop	r24
+ 40c:	7f 91       	pop	r23
+ 40e:	6f 91       	pop	r22
+ 410:	5f 91       	pop	r21
+ 412:	4f 91       	pop	r20
+ 414:	3f 91       	pop	r19
+ 416:	2f 91       	pop	r18
+ 418:	0f 90       	pop	r0
+ 41a:	0f be       	out	0x3f, r0	; 63
+ 41c:	0f 90       	pop	r0
+ 41e:	1f 90       	pop	r1
+ 420:	18 95       	reti
+
+00000422 <DisplayCreate>:
+}
+
+void DisplayClear(SegmentDisplay disp)
+{
+	Display * d = (Display *)disp;
+	memset(d->buffer, CONFIG_GLYPH_0, CONFIG_SEGMENT_DISPLAY_SEGMENT_NUMBER);
+ 422:	80 91 7d 00 	lds	r24, 0x007D	; 0x80007d <display+0xd>
+ 426:	81 11       	cpse	r24, r1
+ 428:	10 c0       	rjmp	.+32     	; 0x44a <DisplayCreate+0x28>
+ 42a:	4c e0       	ldi	r20, 0x0C	; 12
+ 42c:	50 e0       	ldi	r21, 0x00	; 0
+ 42e:	6e e7       	ldi	r22, 0x7E	; 126
+ 430:	70 e0       	ldi	r23, 0x00	; 0
+ 432:	80 e7       	ldi	r24, 0x70	; 112
+ 434:	90 e0       	ldi	r25, 0x00	; 0
+ 436:	6f d0       	rcall	.+222    	; 0x516 <memset>
+ 438:	e0 e7       	ldi	r30, 0x70	; 112
+ 43a:	f0 e0       	ldi	r31, 0x00	; 0
+ 43c:	81 e0       	ldi	r24, 0x01	; 1
+ 43e:	85 87       	std	Z+13, r24	; 0x0d
+ 440:	14 86       	std	Z+12, r1	; 0x0c
+ 442:	8f ef       	ldi	r24, 0xFF	; 255
+ 444:	87 bb       	out	0x17, r24	; 23
+ 446:	84 bb       	out	0x14, r24	; 20
+ 448:	88 9a       	sbi	0x11, 0	; 17
+ 44a:	80 e7       	ldi	r24, 0x70	; 112
+ 44c:	90 e0       	ldi	r25, 0x00	; 0
+ 44e:	08 95       	ret
+
+00000450 <DisplayUpdate>:
+ 450:	fc 01       	movw	r30, r24
+ 452:	90 9a       	sbi	0x12, 0	; 18
+ 454:	84 85       	ldd	r24, Z+12	; 0x0c
+ 456:	df 01       	movw	r26, r30
+ 458:	a8 0f       	add	r26, r24
+ 45a:	b1 1d       	adc	r27, r1
+ 45c:	8c 91       	ld	r24, X
+ 45e:	88 bb       	out	0x18, r24	; 24
+ 460:	84 85       	ldd	r24, Z+12	; 0x0c
+ 462:	85 bb       	out	0x15, r24	; 21
+ 464:	90 98       	cbi	0x12, 0	; 18
+ 466:	84 85       	ldd	r24, Z+12	; 0x0c
+ 468:	8f 5f       	subi	r24, 0xFF	; 255
+ 46a:	8c 30       	cpi	r24, 0x0C	; 12
+ 46c:	11 f0       	breq	.+4      	; 0x472 <__stack+0x13>
+ 46e:	84 87       	std	Z+12, r24	; 0x0c
+ 470:	08 95       	ret
+ 472:	14 86       	std	Z+12, r1	; 0x0c
+ 474:	08 95       	ret
+
+00000476 <DisplayWrite>:
+}
+
+void DisplayWrite(SegmentDisplay disp, uint8_t data, uint8_t index)
+{
+ 476:	0f 93       	push	r16
+ 478:	1f 93       	push	r17
+	if (index >= CONFIG_SEGMENT_DISPLAY_SEGMENT_NUMBER || data > 9)
+ 47a:	4c 30       	cpi	r20, 0x0C	; 12
+ 47c:	08 f0       	brcs	.+2      	; 0x480 <DisplayWrite+0xa>
+ 47e:	48 c0       	rjmp	.+144    	; 0x510 <DisplayWrite+0x9a>
+ 480:	6a 30       	cpi	r22, 0x0A	; 10
+ 482:	08 f0       	brcs	.+2      	; 0x486 <DisplayWrite+0x10>
+ 484:	45 c0       	rjmp	.+138    	; 0x510 <DisplayWrite+0x9a>
+		return;
+	}
+	
+	Display * d = (Display *)disp;
+	
+	switch(data)
+ 486:	06 2f       	mov	r16, r22
+ 488:	10 e0       	ldi	r17, 0x00	; 0
+ 48a:	0a 30       	cpi	r16, 0x0A	; 10
+ 48c:	11 05       	cpc	r17, r1
+ 48e:	08 f0       	brcs	.+2      	; 0x492 <DisplayWrite+0x1c>
+ 490:	3f c0       	rjmp	.+126    	; 0x510 <DisplayWrite+0x9a>
+ 492:	f8 01       	movw	r30, r16
+ 494:	e1 5e       	subi	r30, 0xE1	; 225
+ 496:	ff 4f       	sbci	r31, 0xFF	; 255
+ 498:	09 94       	ijmp
+	{
+		case 0:
+		d->buffer[index] = CONFIG_GLYPH_0;
+ 49a:	fc 01       	movw	r30, r24
+ 49c:	e4 0f       	add	r30, r20
+ 49e:	f1 1d       	adc	r31, r1
+ 4a0:	2e e7       	ldi	r18, 0x7E	; 126
+ 4a2:	20 83       	st	Z, r18
+		break;
+ 4a4:	35 c0       	rjmp	.+106    	; 0x510 <DisplayWrite+0x9a>
+		case 1:
+		d->buffer[index] = CONFIG_GLYPH_1;
+ 4a6:	fc 01       	movw	r30, r24
+ 4a8:	e4 0f       	add	r30, r20
+ 4aa:	f1 1d       	adc	r31, r1
+ 4ac:	20 e3       	ldi	r18, 0x30	; 48
+ 4ae:	20 83       	st	Z, r18
+		break;
+ 4b0:	2f c0       	rjmp	.+94     	; 0x510 <DisplayWrite+0x9a>
+		case 2:
+		d->buffer[index] = CONFIG_GLYPH_2;
+ 4b2:	fc 01       	movw	r30, r24
+ 4b4:	e4 0f       	add	r30, r20
+ 4b6:	f1 1d       	adc	r31, r1
+ 4b8:	2d e6       	ldi	r18, 0x6D	; 109
+ 4ba:	20 83       	st	Z, r18
+		break;
+ 4bc:	29 c0       	rjmp	.+82     	; 0x510 <DisplayWrite+0x9a>
+		case 3:
+		d->buffer[index] = CONFIG_GLYPH_3;
+ 4be:	fc 01       	movw	r30, r24
+ 4c0:	e4 0f       	add	r30, r20
+ 4c2:	f1 1d       	adc	r31, r1
+ 4c4:	29 e7       	ldi	r18, 0x79	; 121
+ 4c6:	20 83       	st	Z, r18
+		break;
+ 4c8:	23 c0       	rjmp	.+70     	; 0x510 <DisplayWrite+0x9a>
+		case 4:
+		d->buffer[index] = CONFIG_GLYPH_4;
+ 4ca:	fc 01       	movw	r30, r24
+ 4cc:	e4 0f       	add	r30, r20
+ 4ce:	f1 1d       	adc	r31, r1
+ 4d0:	23 e3       	ldi	r18, 0x33	; 51
+ 4d2:	20 83       	st	Z, r18
+		break;
+ 4d4:	1d c0       	rjmp	.+58     	; 0x510 <DisplayWrite+0x9a>
+		case 5:
+		d->buffer[index] = CONFIG_GLYPH_5;
+ 4d6:	fc 01       	movw	r30, r24
+ 4d8:	e4 0f       	add	r30, r20
+ 4da:	f1 1d       	adc	r31, r1
+ 4dc:	2b e5       	ldi	r18, 0x5B	; 91
+ 4de:	20 83       	st	Z, r18
+		break;
+ 4e0:	17 c0       	rjmp	.+46     	; 0x510 <DisplayWrite+0x9a>
+		case 6:
+		d->buffer[index] = CONFIG_GLYPH_6;
+ 4e2:	fc 01       	movw	r30, r24
+ 4e4:	e4 0f       	add	r30, r20
+ 4e6:	f1 1d       	adc	r31, r1
+ 4e8:	2f e5       	ldi	r18, 0x5F	; 95
+ 4ea:	20 83       	st	Z, r18
+		break;
+ 4ec:	11 c0       	rjmp	.+34     	; 0x510 <DisplayWrite+0x9a>
+		case 7:
+		d->buffer[index] = CONFIG_GLYPH_7;
+ 4ee:	fc 01       	movw	r30, r24
+ 4f0:	e4 0f       	add	r30, r20
+ 4f2:	f1 1d       	adc	r31, r1
+ 4f4:	20 e7       	ldi	r18, 0x70	; 112
+ 4f6:	20 83       	st	Z, r18
+		break;
+ 4f8:	0b c0       	rjmp	.+22     	; 0x510 <DisplayWrite+0x9a>
+		case 8:
+		d->buffer[index] = CONFIG_GLYPH_8;
+ 4fa:	fc 01       	movw	r30, r24
+ 4fc:	e4 0f       	add	r30, r20
+ 4fe:	f1 1d       	adc	r31, r1
+ 500:	2f e7       	ldi	r18, 0x7F	; 127
+ 502:	20 83       	st	Z, r18
+		break;
+ 504:	05 c0       	rjmp	.+10     	; 0x510 <DisplayWrite+0x9a>
+		case 9:
+		d->buffer[index] = CONFIG_GLYPH_9;
+ 506:	fc 01       	movw	r30, r24
+ 508:	e4 0f       	add	r30, r20
+ 50a:	f1 1d       	adc	r31, r1
+ 50c:	2b e7       	ldi	r18, 0x7B	; 123
+ 50e:	20 83       	st	Z, r18
+		break;
+	}
+}
+ 510:	1f 91       	pop	r17
+ 512:	0f 91       	pop	r16
+ 514:	08 95       	ret
+
+00000516 <memset>:
+ 516:	dc 01       	movw	r26, r24
+ 518:	01 c0       	rjmp	.+2      	; 0x51c <memset+0x6>
+ 51a:	6d 93       	st	X+, r22
+ 51c:	41 50       	subi	r20, 0x01	; 1
+ 51e:	50 40       	sbci	r21, 0x00	; 0
+ 520:	e0 f7       	brcc	.-8      	; 0x51a <memset+0x4>
+ 522:	08 95       	ret
+
+00000524 <_exit>:
+ 524:	f8 94       	cli
+
+00000526 <__stop_program>:
+ 526:	ff cf       	rjmp	.-2      	; 0x526 <__stop_program>
